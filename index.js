@@ -16,6 +16,9 @@ client.on('message', message => {
         // send back "Pong." to the channel the message was sent in
         message.channel.send(`help ${args}`);
     }
+    else if (command === 'test') {
+        message.channel.send(`test`);
+    }
 });
 
 client.login(process.env.DISCORD_TOKEN);
