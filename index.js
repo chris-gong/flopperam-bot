@@ -27,13 +27,13 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
 
     if ( command === 'ping' ) {
+	// send back "Pong." to the channel the message was sent in
         client.commands.get( 'ping' ).execute(message, args);
     }
 
-	if ( command === 'help' ) {
-        // send back "Pong." to the channel the message was sent in
+    if ( command === 'help' ) {
         message.channel.send(`help ${args}`);
     }
 });
 
-client.login('');
+client.login(process.env.DISCORD_TOKEN);
