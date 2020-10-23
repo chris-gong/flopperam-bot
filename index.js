@@ -34,7 +34,6 @@ client.on('message', message => {
         // send back "Pong." to the channel the message was sent in
         message.channel.send(`help ${args}`);
     }
-
 });
 
 client.login('');
